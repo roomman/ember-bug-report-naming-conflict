@@ -1,0 +1,11 @@
+<p><LinkTo @route="application">Home</LinkTo></p>
+<p><LinkTo @route="video.view">Link to Video.View</LinkTo></p>
+
+{{outlet}}
+
+<button type="button" {{on "click" this.toggleShowComponent}}>
+  Render Video.View
+</button>
+{{#if this.showComponent}}
+  <Video::View />
+{{/if}}
